@@ -19,7 +19,7 @@ TildeOpen-30b is a 30B parameter open-source foundational language model built t
 
 ```bash
 # Clone this repository
-git clone <your-repo-url>
+git clone <https://github.com/sarkanmagij/tilde-test>
 cd tilde-test
 
 # Install dependencies
