@@ -26,18 +26,63 @@ cd tilde-test
 pip3 install -r requirements.txt
 ```
 
-### 2. Test Connection
+### 2. Choose Your Approach
 
+#### 📓 **Google Colab** (Recommended for M2 Mac with 8GB RAM)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
+- ✅ Free GPU access
+- ✅ No local storage required
+- ✅ Full model capabilities
+- ✅ Interactive chat interface
+
+#### 📡 **API Demo** (Zero Setup Required)
 ```bash
-# Quick connection test
-python3 test_connection.py
+# Test immediately without any downloads
+python3 tilde_api_demo.py
+```
+- ✅ Uses Hugging Face Inference API
+- ✅ No model downloads
+- ✅ Works on any system
+- ✅ Immediate testing
+
+#### 🚀 **Minimal Demo** (Local Exploration)
+```bash
+# Explore the model without downloading 60GB+ files
+python3 tilde_minimal.py
+```
+- ✅ Only downloads tokenizer (~2.3MB)
+- ✅ Works on any system
+- ✅ Demonstrates multilingual capabilities
+- ✅ Shows system requirements for full model
+
+#### 🎮 **GPU Users** (24GB+ VRAM)
+```bash
+# Full model with optimizations
+python3 tilde_lightweight.py
+```
+- ✅ 8-bit/4-bit quantization
+- ✅ Automatic memory management
+- ✅ Best performance/memory balance
+
+#### 💻 **CPU Users** (32GB+ RAM)
+```bash
+# CPU-optimized version (very slow)
+python3 tilde_cpu_friendly.py
+```
+- ⚠️ Extremely slow on CPU
+- ⚠️ Requires significant RAM
+- 💡 Cloud GPU recommended instead
+
+#### 🔧 **Standard Approach** (48GB+ GPU)
+```bash
+# Original full model loading
+python3 tilde_model.py
 ```
 
-### 3. Interactive Chat
-
+#### 🧪 **Quick Test** (Downloads full model)
 ```bash
-# Start interactive chat with the model
-python3 tilde_model.py
+# Test connection with full model download
+python3 test_connection.py
 ```
 
 ## Project Structure
@@ -46,8 +91,16 @@ python3 tilde_model.py
 tilde-test/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
-├── tilde_model.py              # Main model interface with chat functionality
-├── test_connection.py          # Quick connection test script
+├── tilde_minimal.py            # 🚀 Minimal demo (tokenizer only, ~2MB download)
+├── tilde_lightweight.py        # 🎮 GPU optimized with quantization
+├── tilde_cpu_friendly.py       # 💻 CPU optimized (slow, high RAM)
+├── tilde_model.py              # 🔧 Standard model interface
+├── test_connection.py          # 🧪 Full model connection test
+├── tilde_api_demo.py           # 📡 API-based demo (zero downloads!)
+├── TildeOpen_30b_Colab.ipynb   # 📓 Google Colab notebook
+├── tilde_colab_optimized.py    # 🚀 Colab-optimized script
+├── app.py                      # 🌐 Gradio web interface (HF Spaces)
+├── requirements_spaces.txt     # 📦 Dependencies for HF Spaces
 └── TildeOpen-30b-README.md     # Official model documentation
 ```
 
@@ -59,6 +112,42 @@ tilde-test/
 - **safetensors** (≥0.3.0) - Safe tensor serialization
 - **sentencepiece** (≥0.1.99) - Tokenization (required for this model)
 - **protobuf** (≥3.20.0) - Protocol buffers
+
+## Lightweight Options (No 60GB Download!)
+
+### 🚀 Minimal Demo - Start Here!
+Perfect for exploring TildeOpen-30b without massive downloads:
+
+```bash
+python3 tilde_minimal.py
+```
+
+**What it does:**
+- Downloads only the tokenizer (~2.3MB)
+- Demonstrates multilingual tokenization
+- Shows system requirements
+- Interactive tokenizer testing
+- Zero model weight downloads
+
+**Best for:**
+- First-time exploration
+- Understanding model capabilities
+- Testing tokenization across 34 languages
+- Checking system compatibility
+
+### 💾 Memory-Optimized Loading
+For users who want the full model with minimal memory usage:
+
+```bash
+python3 tilde_lightweight.py
+```
+
+**Features:**
+- Automatic quantization (4-bit/8-bit)
+- Streams model weights as needed
+- Adaptive memory management
+- GPU/CPU detection
+- Reduced storage requirements
 
 ## Usage Examples
 
@@ -123,7 +212,54 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 ### Performance Notes
 - 🖥️ **CPU Only**: Will work but be extremely slow
 - 🎮 **GPU Recommended**: Significant performance improvement
-- ☁️ **Cloud Options**: Consider Google Colab Pro, AWS, or similar for GPU access
+- ☁️ **Cloud Options**: Google Colab, Hugging Face Spaces, AWS, or similar for GPU access
+
+## 🚀 Cloud Deployment Options
+
+### 📓 Google Colab (Recommended for M2 Mac users)
+
+**Perfect for your M2 Mac with 8GB RAM!**
+
+1. **Open the Colab Notebook:**
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
+
+2. **Enable GPU:** Go to `Runtime` > `Change runtime type` > Select `GPU`
+
+3. **Run all cells** in order - the notebook includes:
+   - Automatic dependency installation
+   - Model loading with quantization
+   - Interactive chat interface
+   - Multilingual testing examples
+
+4. **Alternative Colab Script:**
+   ```bash
+   # Upload tilde_colab_optimized.py to Colab and run:
+   python3 tilde_colab_optimized.py
+   ```
+
+### 🤗 Hugging Face Spaces
+
+**Deploy your own web interface:**
+
+1. **Fork this repository**
+2. **Create a new Space** on Hugging Face
+3. **Upload these files:**
+   - `app.py` (main Gradio interface)
+   - `requirements_spaces.txt` (rename to `requirements.txt`)
+   - `README_spaces.md` (rename to `README.md`)
+4. **Set GPU hardware** in Space settings
+5. **Your web interface will be live!**
+
+### ⚡ Quick Cloud Start
+
+**For immediate testing without setup:**
+
+```python
+# Use the API demo (no local downloads)
+python3 tilde_api_demo.py
+```
+
+This uses Hugging Face's Inference API - zero setup required!
 
 ## Supported Languages
 
