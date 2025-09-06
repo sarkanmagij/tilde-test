@@ -167,14 +167,14 @@ def launch_option():
             elif choice == '3':
                 print("\n🔄 Opening Google Colab...")
                 import webbrowser
-                webbrowser.open("https://colab.research.google.com/github/YOUR_USERNAME/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb")
+                webbrowser.open("https://colab.research.google.com/github/sarkanmagij/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb")
                 print("📓 Colab should open in your browser!")
                 break
             elif choice == '4':
                 print("\n📚 For more information:")
                 print("   - README.md: Complete documentation")
                 print("   - DEPLOYMENT.md: Cloud deployment guide")
-                print("   - GitHub: https://github.com/YOUR_USERNAME/tilde-test")
+                print("   - GitHub: https://github.com/sarkanmagij/tilde-test")
                 continue
             elif choice == '5':
                 print("\n👋 Goodbye!")

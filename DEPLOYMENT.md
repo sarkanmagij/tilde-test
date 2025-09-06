@@ -7,7 +7,7 @@ This guide shows you how to deploy TildeOpen-30b on various cloud platforms, per
 ### Option 1: Jupyter Notebook (Recommended)
 
 1. **Open the Colab Notebook:**
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sarkanmagij/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
 
 2. **Enable GPU:**
    - Go to `Runtime` > `Change runtime type`
@@ -23,7 +23,7 @@ This guide shows you how to deploy TildeOpen-30b on various cloud platforms, per
 1. **Upload script to Colab:**
    ```python
    # Upload tilde_colab_optimized.py to your Colab session
-   !wget https://raw.githubusercontent.com/YOUR_USERNAME/tilde-test/main/tilde_colab_optimized.py
+   !wget https://raw.githubusercontent.com/sarkanmagij/tilde-test/main/tilde_colab_optimized.py
    ```
 
 2. **Run the script:**

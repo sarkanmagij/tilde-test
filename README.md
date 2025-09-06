@@ -29,7 +29,7 @@ pip3 install -r requirements.txt
 ### 2. Choose Your Approach
 
 #### 📓 **Google Colab** (Recommended for M2 Mac with 8GB RAM)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sarkanmagij/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
 - ✅ Free GPU access
 - ✅ No local storage required
 - ✅ Full model capabilities
@@ -221,7 +221,7 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 **Perfect for your M2 Mac with 8GB RAM!**
 
 1. **Open the Colab Notebook:**
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sarkanmagij/tilde-test/blob/main/TildeOpen_30b_Colab.ipynb)
 
 2. **Enable GPU:** Go to `Runtime` > `Change runtime type` > Select `GPU`
 

@@ -270,7 +270,7 @@ def create_demo():
         **Links:**
         - [Model on Hugging Face](https://huggingface.co/TildeAI/TildeOpen-30b)
         - [Tilde.ai](https://tilde.ai/tildeopen-llm/)
-        - [GitHub Repository](https://github.com/YOUR_USERNAME/tilde-test)
+        - [GitHub Repository](https://github.com/sarkanmagij/tilde-test)
         
         *Note: This is a foundational model not yet adapted for instruction following or safety alignment.*
         """)
